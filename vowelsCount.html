@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countVowels(str) {
+            let count = 0;
+            for (let char of str) {
+                let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+                for (let vowel of vowels) {
+                    if (char === vowel) {
+                        count++;
+                    }
+                }
+            }
+            console.log(count);
+        }
+
+        countVowels("Suraj Arya");
+    </script>
+
+</body>
+
+</html>

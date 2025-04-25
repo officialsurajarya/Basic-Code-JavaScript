@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 95vh;
+        }
+        .bag {
+            background-color: lightgreen;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .wishlist {
+            border: 2px solid black;
+            padding: 4px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sura Arya</h1>
+    <br> <hr>
+    <div class="btns">
+        <button class="bag" >Add to bag</button>
+        <button class="wishlist">❤️ Wishlist</button>
+    </div>
+    
+    <script>
+        let item = 0;
+        let msg = document.querySelector('h1');
+        msg.innerText = `Your Bag has ${item} items`;
+
+        document.querySelector('.bag').addEventListener('click',function(){
+            item++;
+            msg.innerText = `Your Bag has ${item} items`;
+        });
+        
+        document.querySelector('.wishlist').onclick = () => {
+            if(item > 0) {
+                item--;
+                msg.innerText = `Your Bag has ${item} items`;
+            }
+        };        
+    </script>
+
+
+
+    <script>
+        const GST = ( 100 + 18 ) / 100;
+        let mango = 100 * GST;
+        console.log(mango);
+    </script>
+</body>
+</html>
